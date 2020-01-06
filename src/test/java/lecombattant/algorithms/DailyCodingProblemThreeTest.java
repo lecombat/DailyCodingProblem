@@ -1,6 +1,7 @@
 package lecombattant.algorithms;
 
 import lecombattant.algorithms.DailyCodingProblemThree.Node;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -44,6 +45,6 @@ class DailyCodingProblemThreeTest {
     Node left = Node.builder().root("left").left(leftLeft).build();
     Node root = Node.builder().root("root").left(left).build();
 
-    Assertions.assertAll(() -> cut.deserialize(cut.serialize(root)).getLeft().getLeft().getRoot().equals("left.left"));
+    Assertions.assertAll(() -> Assert.assertTrue(cut.deserialize(cut.serialize(root)).getLeft().getLeft().getRoot().equals("left.left")));
   }
 }
