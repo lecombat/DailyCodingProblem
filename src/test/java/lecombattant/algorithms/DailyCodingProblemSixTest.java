@@ -27,7 +27,7 @@ class DailyCodingProblemSixTest {
     cut.addFirst(2);
     cut.addFirst(3);
 
-    assertAll(() -> Assertions.assertTrue(cut.getSize() == 3));
+    assertAll(() -> Assertions.assertEquals(3,cut.getSize()));
   }
 
   @Test
@@ -37,8 +37,8 @@ class DailyCodingProblemSixTest {
     cut.addFirst(2);
     cut.addFirst(3);
 
-    assertAll(() -> Assertions.assertTrue(cut.get(0).getValue().equals(3)),
-        () -> Assertions.assertTrue(cut.get(1).getValue().equals(2)),
-        () -> Assertions.assertTrue(cut.get(2).getValue().equals(1)));
+    assertAll(() -> Assertions.assertEquals(3, cut.get(0).getValue()),
+        () -> Assertions.assertEquals(2, cut.get(1).getValue()),
+        () -> Assertions.assertEquals(1, cut.get(2).getValue()));
   }
 }

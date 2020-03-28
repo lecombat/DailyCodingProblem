@@ -1,14 +1,14 @@
 package lecombattant.algorithms;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
 
 import io.vavr.collection.List;
 import org.junit.Assert;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 class DailyCodingProblemFourTest {
@@ -34,7 +34,7 @@ class DailyCodingProblemFourTest {
   void findLowestPositiveIntegerWithZero() {
     List<Integer> list = List.of(1, 2, 0);
 
-    assertAll(() -> Assert.assertTrue(cut.findLowestPositiveInteger(list).equals(3)));
+    assertAll(() -> Assert.assertEquals(3, (int) cut.findLowestPositiveInteger(list)));
   }
 
   @Test
@@ -42,6 +42,6 @@ class DailyCodingProblemFourTest {
   void findLowestPositiveIntegerNot() {
     List<Integer> list = List.of(1, 2, 0);
 
-    assertAll(() -> Assert.assertFalse(cut.findLowestPositiveInteger(list).equals(2)));
+    assertAll(() -> Assert.assertNotEquals(2, (int) cut.findLowestPositiveInteger(list)));
   }
 }
