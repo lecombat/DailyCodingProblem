@@ -26,7 +26,7 @@ class DailyCodingProblemFourTest {
   void findLowestPositiveInteger() {
     List<Integer> list = List.of(3, 4, -1, 1);
 
-    assertAll(() -> cut.findLowestPositiveInteger(list).equals(2));
+    assertAll(() -> Assert.assertEquals(2, (int) cut.findLowestPositiveInteger(list)));
   }
 
   @Test
