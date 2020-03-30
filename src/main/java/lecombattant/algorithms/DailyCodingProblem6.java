@@ -13,7 +13,7 @@ import lombok.Data;
  */
 
 @Data
-public class DailyCodingProblemSix {
+public class DailyCodingProblem6 {
 
   private Node head;
   private int size;
@@ -21,7 +21,7 @@ public class DailyCodingProblemSix {
   // Derefence pointer and get it
   private HashMap<Integer, Node> map = new HashMap<>();
 
-  public DailyCodingProblemSix() {
+  public DailyCodingProblem6() {
   }
 
   private int getPointer(Node node) {
@@ -30,10 +30,6 @@ public class DailyCodingProblemSix {
 
   private Node dereferencePointer(Integer pointer) {
     return pointer == 0 ? null : map.get(pointer);
-  }
-
-  private Integer xorNode(Node node1, Node node2) {
-    return getPointer(node1) ^ getPointer(node2);
   }
 
   public <T> void addFirst(T element) {

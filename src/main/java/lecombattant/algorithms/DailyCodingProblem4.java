@@ -12,7 +12,7 @@ import io.vavr.collection.List;
  * For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should give 3
  */
 
-public class DailyCodingProblemFour {
+public class DailyCodingProblem4 {
 
   public Integer findLowestPositiveInteger(List<Integer> list) {
     List<Integer> l = list.filter(i -> i > 0).distinct().sorted().collect(List.collector());

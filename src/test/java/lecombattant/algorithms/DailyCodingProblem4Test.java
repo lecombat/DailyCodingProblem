@@ -11,13 +11,13 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class DailyCodingProblemFourTest {
+class DailyCodingProblem4Test {
 
-  private DailyCodingProblemFour cut;
+  private DailyCodingProblem4 cut;
 
   @BeforeEach
   void setUp() {
-    cut = new DailyCodingProblemFour();
+    cut = new DailyCodingProblem4();
   }
 
 

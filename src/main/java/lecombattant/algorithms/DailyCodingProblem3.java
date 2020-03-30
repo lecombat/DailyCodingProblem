@@ -23,7 +23,7 @@ import lombok.Data;
  * assert deserialize(serialize(node)).left.left.val == 'left.left'
  */
 
-public class DailyCodingProblemThree {
+public class DailyCodingProblem3 {
 
   public static String serialize(Node tree) {
     if (tree == null) {

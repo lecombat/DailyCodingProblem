@@ -12,13 +12,13 @@ import lombok.Data;
  */
 
 @Data
-public class DailyCodingProblemSixDoubleLinkedList {
+public class DailyCodingProblem6DoubleLinkedList {
 
   private Node head;
   private Node tail;
   private int size;
 
-  public DailyCodingProblemSixDoubleLinkedList() {
+  public DailyCodingProblem6DoubleLinkedList() {
   }
 
   public <T> void addFirst(T element) {

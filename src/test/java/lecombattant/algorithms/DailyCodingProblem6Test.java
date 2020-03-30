@@ -10,14 +10,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class DailyCodingProblemSixTest {
+class DailyCodingProblem6Test {
 
-  private DailyCodingProblemSix cut;
+  private DailyCodingProblem6 cut;
   //We can change the class with DailyCodingProblemSixDoubleLinkedList and observe the same behavior
 
   @BeforeEach
   void setUp() {
-    cut = new DailyCodingProblemSix();
+    cut = new DailyCodingProblem6();
   }
 
   @Test

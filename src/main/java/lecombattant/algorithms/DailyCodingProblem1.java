@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * This Algorith it is on O(n) complexity
  */
 
-public final class DailyCodingProblemOne {
+public final class DailyCodingProblem1 {
 
   public static Boolean containsTwoNumbersWithSumEqualsTo(List<Integer> list, Integer k){
     HashSet<Integer> distinctValues = new HashSet<Integer>();

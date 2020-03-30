@@ -9,13 +9,13 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class DailyCodingProblemTwoTest {
+class DailyCodingProblem2Test {
 
-  private DailyCodingProblemTwo cut;
+  private DailyCodingProblem2 cut;
 
   @BeforeEach
   void setUp() {
-    cut = new DailyCodingProblemTwo();
+    cut = new DailyCodingProblem2();
   }
 
   @Test
@@ -24,9 +24,9 @@ class DailyCodingProblemTwoTest {
     List list = List.of(1, 2, 3, 4, 5);
     List listExcepted = List.of(120, 60, 40, 30, 24);
 
-    DailyCodingProblemTwo.productOfNumbersExceptPositionI(list);
+    DailyCodingProblem2.productOfNumbersExceptPositionI(list);
 
-    Assertions.assertAll(() -> DailyCodingProblemTwo.productOfNumbersExceptPositionI(list).equals(listExcepted));
+    Assertions.assertAll(() -> DailyCodingProblem2.productOfNumbersExceptPositionI(list).equals(listExcepted));
   }
 
   @Test
@@ -35,8 +35,8 @@ class DailyCodingProblemTwoTest {
     List list = List.of(1, 2, 3, 4, 0);
     List listExcepted = List.of(120, 60, 40, 30, 24);
 
-    DailyCodingProblemTwo.productOfNumbersExceptPositionI(list);
+    DailyCodingProblem2.productOfNumbersExceptPositionI(list);
 
-    Assertions.assertAll(() -> DailyCodingProblemTwo.productOfNumbersExceptPositionI(list).equals(listExcepted));
+    Assertions.assertAll(() -> DailyCodingProblem2.productOfNumbersExceptPositionI(list).equals(listExcepted));
   }
 }

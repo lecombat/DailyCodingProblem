@@ -1,6 +1,6 @@
 package lecombattant.algorithms;
 
-import lecombattant.algorithms.DailyCodingProblemThree.Node;
+import lecombattant.algorithms.DailyCodingProblem3.Node;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,13 +10,13 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class DailyCodingProblemThreeTest {
+class DailyCodingProblem3Test {
 
-  private DailyCodingProblemThree cut;
+  private DailyCodingProblem3 cut;
 
   @BeforeEach
   void setUp() {
-    cut = new DailyCodingProblemThree();
+    cut = new DailyCodingProblem3();
   }
 
 
