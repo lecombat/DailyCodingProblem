@@ -4,8 +4,7 @@ import io.vavr.control.Option;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import lombok.Builder;
-import lombok.Data;
+import lecombattant.algorithms.utils.Node;
 
 /**
  * This problem was asked by Google.
@@ -29,7 +28,7 @@ public class DailyCodingProblem3 {
     if (tree == null) {
       return "";
     } else {
-      return tree.getRoot() + Node.SEPARATOR + serialize(tree.getLeft()) + Node.SEPARATOR + serialize(tree.getRight());
+      return tree.getValue() + Node.SEPARATOR + serialize(tree.getLeft()) + Node.SEPARATOR + serialize(tree.getRight());
     }
   }
 
@@ -46,20 +45,10 @@ public class DailyCodingProblem3 {
     if (root.isEmpty()) {
       return Node.builder().build();
     }
-    Node tree = Node.builder().root(root.get()).build();
+    Node tree = Node.builder().value(root.get()).build();
     tree.setLeft(deserializeHelper(nodes));
     tree.setRight(deserializeHelper(nodes));
 
     return tree;
-  }
-
-  @Data
-  @Builder
-  public static class Node {
-
-    public static final String SEPARATOR = " -1 ";
-    private String root;
-    private Node left;
-    private Node right;
   }
 }

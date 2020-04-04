@@ -1,7 +1,7 @@
 package lecombattant.algorithms;
 
 /**
- * TThis problem was asked by Facebook.
+ * This problem was asked by Facebook.
  *
  * Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
  *

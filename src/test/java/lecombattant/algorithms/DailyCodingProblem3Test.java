@@ -1,6 +1,6 @@
 package lecombattant.algorithms;
 
-import lecombattant.algorithms.DailyCodingProblem3.Node;
+import lecombattant.algorithms.utils.Node;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,9 +28,9 @@ class DailyCodingProblem3Test {
   @Test
   @DisplayName("When serialise Node, then result is the string separed with one space")
   void serialize() {
-    Node leftLeft = Node.builder().root("left.left").build();
-    Node left = Node.builder().root("left").left(leftLeft).build();
-    Node root = Node.builder().root("root").left(left).build();
+    Node leftLeft = Node.builder().value("left.left").build();
+    Node left = Node.builder().value("left").left(leftLeft).build();
+    Node root = Node.builder().value("root").left(left).build();
 
     String serialize = cut.serialize(root);
     System.out.println(serialize);
@@ -40,11 +40,12 @@ class DailyCodingProblem3Test {
 
   @Test
   @DisplayName("Deserialize and serialize")
-  void deserialize(){
-    Node leftLeft = Node.builder().root("left.left").build();
-    Node left = Node.builder().root("left").left(leftLeft).build();
-    Node root = Node.builder().root("root").left(left).build();
+  void deserialize() {
+    Node leftLeft = Node.builder().value("left.left").build();
+    Node left = Node.builder().value("left").left(leftLeft).build();
+    Node root = Node.builder().value("root").left(left).build();
 
-    Assertions.assertAll(() -> Assert.assertTrue(cut.deserialize(cut.serialize(root)).getLeft().getLeft().getRoot().equals("left.left")));
+    Assertions.assertAll(() -> Assert
+        .assertTrue(cut.deserialize(cut.serialize(root)).getLeft().getLeft().getValue().equals("left.left")));
   }
 }
